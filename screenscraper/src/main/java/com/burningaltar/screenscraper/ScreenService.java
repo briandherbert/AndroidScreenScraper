@@ -41,8 +41,10 @@ public abstract class ScreenService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.v(TAG, "Service onStartCommand");
-        ScreenActivity.startForImageCallback(this);
-
         return Service.START_NOT_STICKY;
+    }
+
+    public void requestScreenshot() {
+        ScreenActivity.startForImageCallback(this);
     }
 }
