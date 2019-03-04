@@ -20,7 +20,6 @@ import android.view.WindowManager;
  * Created by bherbert on 8/5/16.
  */
 
-@TargetApi(21)
 public class ScreenActivity extends Activity implements ImageTransmogrifier.Listener {
     static final String TAG = ScreenActivity.class.getSimpleName();
     public static final String KEY_IMAGE_BYTE_ARRAY = "BYTE_ARRAY";
@@ -43,7 +42,6 @@ public class ScreenActivity extends Activity implements ImageTransmogrifier.List
 
     public static void startForImageResult(Activity activity, int resultCode) {
         Intent intent = new Intent(activity, ScreenActivity.class);
-        intent.putExtra(EXTRA_SERVICE_CLASS, activity.getClass());
         activity.startActivityForResult(intent, resultCode);
     }
 

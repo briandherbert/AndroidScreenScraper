@@ -40,11 +40,11 @@ public class MainActivity extends Activity {
 
     public void onClick(View view) {
         Log.v(TAG, "clicked");
-        // capture
-        //ScreenActivity.startForImageResult(this, REQ_GET_SCREENSHOT);
+        // capture. Toggle between this and the bottom lines to either get image back here or to service
+        ScreenActivity.startForImageResult(this, REQ_GET_SCREENSHOT);
 
-        Intent intent = new Intent(this, GetScreenService.class);
-        startService(intent);
+//        Intent intent = new Intent(this, GetScreenService.class);
+//        startService(intent);
     }
 
     @Override
